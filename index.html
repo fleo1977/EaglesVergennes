@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Addison County Eagles in Vergennes, Vermont. Events, forms, social room, bingo, and member information.">
+  <title>Addison County Eagles</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="utility-bar">
+      <p>67 New Haven Rd, Vergennes VT 05491</p>
+      <div class="utility-actions">
+        <a href="tel:8028772055">802.877.2055</a>
+        <a class="facebook-link" href="https://facebook.com/foe3801/" target="_blank" rel="noopener noreferrer" aria-label="Addison County Eagles on Facebook">
+          <span class="facebook-icon" aria-hidden="true">f</span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/eagle-logo.png" alt="FOE eagle logo">
+        <span>Addison County Eagles</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <div class="nav-item has-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">
+            About the Eagles <span aria-hidden="true">▾</span>
+          </button>
+          <div class="dropdown-menu">
+            <a href="who-we-are.html">Who We Are</a>
+            <a href="those-who-serve.html">Those Who Serve</a>
+            <a href="member-benefits.html">Member Benefits</a>
+            <a href="history.html">History</a>
+          </div>
+        </div>
+        <a href="#events">Calendar</a>
+        <a href="#social-room">Social Room</a>
+        <a href="#bingo">Bingo</a>
+        <a href="#officers">Officers</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Vergennes, Vermont</p>
+        <h1>Addison County Eagles</h1>
+        <p class="hero-text">A local aerie for fellowship, service, entertainment, bingo, and community support.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#newsletter">Newsletter</a>
+          <a class="button secondary" href="#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <aside class="event-panel" id="events" aria-labelledby="events-title">
+        <p class="panel-label">This Month</p>
+        <h2 id="events-title">Upcoming Events</h2>
+        <ul class="event-list">
+          <li><span>Date TBD</span>Karaoke Night</li>
+          <li><span>Date TBD</span>Live Entertainment</li>
+          <li><span>Date TBD</span>Community Dinner</li>
+          <li><span>Date TBD</span>Member Social</li>
+        </ul>
+        <p class="panel-note">We will add the official calendar and event details as we build the next pages.</p>
+      </aside>
+    </section>
+
+    <section class="quick-info" id="about" aria-label="Featured information">
+      <article id="bingo">
+        <p class="card-kicker">Local Events</p>
+        <h2>Wing Wednesday</h2>
+        <p>4:30pm to 6:30pm</p>
+      </article>
+      <article id="social-room">
+        <p class="card-kicker">Membership</p>
+        <h2>Aerie Application</h2>
+        <p>Application details and downloadable forms will be added as we build the forms page.</p>
+        <span class="text-action">Coming Soon</span>
+      </article>
+      <article id="newsletter">
+        <p class="card-kicker">Membership</p>
+        <h2>Auxiliary Application</h2>
+        <p>Application details and downloadable forms will be added as we build the forms page.</p>
+        <span class="text-action">Coming Soon</span>
+      </article>
+    </section>
+
+    <section class="suggestions" id="contact" aria-labelledby="suggestions-title">
+      <div>
+        <p class="eyebrow">Have an idea?</p>
+        <h2 id="suggestions-title">Suggestions</h2>
+        <p>Share a note for the lodge team. This demo form is ready for a future backend or form service.</p>
+        <address class="contact-block">
+          67 New Haven Rd<br>
+          Vergennes, VT 05491<br>
+          802.877.2055<br>
+          addisoncountyeagles@gmail.com
+        </address>
+      </div>
+      <form class="suggestion-form">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name">
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email">
+        </label>
+        <label>
+          <span>Suggestion</span>
+          <textarea name="suggestion" rows="4"></textarea>
+        </label>
+        <button class="button primary" type="submit">Submit Suggestion</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Copyright &copy; 2026, Addison County Eagles. All Rights Reserved</p>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
