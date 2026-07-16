@@ -607,6 +607,166 @@ h1 {
   color: var(--muted);
 }
 
+.wide-feature.benefits-feature {
+  max-width: 740px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.benefits-intro {
+  margin-top: 8px;
+}
+
+.benefits-page .legacy-section p,
+.benefits-page .legacy-section li {
+  text-align: left;
+}
+
+.benefit-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin: 42px 0 48px;
+}
+
+.benefit-highlights article {
+  text-align: center;
+}
+
+.benefit-highlights span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.benefit-highlights h2 {
+  margin: 0 0 12px;
+  color: var(--blue-dark);
+  font-size: 1.35rem;
+}
+
+.benefit-highlights p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.affinity-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+}
+
+.affinity-list article {
+  min-height: 150px;
+  padding: 22px;
+  background: var(--surface);
+}
+
+.affinity-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  margin-bottom: 10px;
+}
+
+.affinity-heading img {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: white;
+  object-fit: contain;
+}
+
+.affinity-list h3 {
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.affinity-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.wide-feature.history-feature {
+  max-width: 740px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.history-page .legacy-section p,
+.history-page .legacy-section li {
+  text-align: left;
+}
+
+.history-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 54px;
+  align-items: start;
+}
+
+.history-copy .legacy-section {
+  margin-bottom: 58px;
+}
+
+.history-copy .legacy-section p {
+  margin: 0 0 24px;
+}
+
+.history-sidebar {
+  padding-top: 6px;
+}
+
+.history-sidebar h2 {
+  margin: 0 0 20px;
+  color: var(--blue-dark);
+  font-size: 1.75rem;
+}
+
+.history-timeline {
+  display: grid;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.history-timeline li {
+  display: block;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.history-timeline span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.history-timeline p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
 .placeholder-page {
   width: min(860px, calc(100% - 32px));
   min-height: 46vh;
@@ -632,6 +792,12 @@ h1 {
   .noteworthy-list {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .benefit-highlights,
+  .affinity-list,
+  .history-layout {
+    grid-template-columns: 1fr;
   }
 
   .hero-copy {
