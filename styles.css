@@ -998,6 +998,86 @@ h1 {
   color: var(--muted);
 }
 
+.officers-page {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 28px 0 64px;
+}
+
+.officers-heading {
+  max-width: 760px;
+  margin: 30px 0 40px;
+}
+
+.officers-heading h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2.5rem, 6vw, 4.7rem);
+}
+
+.officers-heading > p:last-child,
+.officer-section--pending > p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.officer-section {
+  margin-top: 28px;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(28, 31, 38, 0.08);
+}
+
+.officer-section-heading {
+  margin-bottom: 22px;
+}
+
+.officer-section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.officer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.officer-card {
+  min-height: 130px;
+  padding: 20px;
+  background: white;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--blue);
+  border-radius: 7px;
+}
+
+.officer-card p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.officer-card h3 {
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: 1.2rem;
+}
+
+.officer-card--vacant {
+  border-top-color: var(--red);
+  background: #fffafa;
+}
+
+.officer-card--vacant h3 {
+  color: var(--red);
+  font-style: italic;
+}
+
 @media (max-width: 900px) {
   .hero,
   .quick-info,
@@ -1012,7 +1092,8 @@ h1 {
 
   .benefit-highlights,
   .affinity-list,
-  .history-layout {
+  .history-layout,
+  .officer-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1119,6 +1200,14 @@ h1 {
 
   .calendar-page {
     width: min(100% - 24px, 1180px);
+  }
+
+  .officers-page {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .officer-section {
+    padding: 22px;
   }
 
   .calendar-toolbar {
