@@ -44,8 +44,8 @@
             <a href="history.html">History</a>
           </div>
         </div>
-        <a href="#events">Calendar</a>
-        <a href="#hall-rental">Hall Rental</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="hall-rental.html">Hall Rental</a>
         <a href="#officers">Officers</a>
         <a href="#contact">Contact</a>
       </div>
@@ -65,15 +65,12 @@
       </div>
 
       <aside class="event-panel" id="events" aria-labelledby="events-title">
-        <p class="panel-label">This Month</p>
+        <p class="panel-label">Next Up</p>
         <h2 id="events-title">Upcoming Events</h2>
-        <ul class="event-list">
-          <li><span>Date TBD</span>Karaoke Night</li>
-          <li><span>Date TBD</span>Live Entertainment</li>
-          <li><span>Date TBD</span>Community Dinner</li>
-          <li><span>Date TBD</span>Member Social</li>
-        </ul>
-        <p class="panel-note">We will add the official calendar and event details as we build the next pages.</p>
+        <ol class="event-list" id="upcoming-events" aria-live="polite">
+          <li class="event-loading">Loading upcoming events…</li>
+        </ol>
+        <a class="text-action" href="calendar.html">View Full Calendar</a>
       </aside>
     </section>
 
@@ -86,14 +83,14 @@
       <article id="hall-rental">
         <p class="card-kicker">Membership</p>
         <h2>Aerie Application</h2>
-        <p>Application details and downloadable forms will be added as we build the forms page.</p>
-        <span class="text-action">Coming Soon</span>
+        <p>Download the membership application for the Addison County Aerie.</p>
+        <a class="text-action" href="assets/applications/FOE-Aerie-Application.pdf" target="_blank" rel="noopener">Download Aerie Application</a>
       </article>
       <article id="newsletter">
         <p class="card-kicker">Membership</p>
         <h2>Auxiliary Application</h2>
-        <p>Application details and downloadable forms will be added as we build the forms page.</p>
-        <span class="text-action">Coming Soon</span>
+        <p>Download the membership application for the Addison County Auxiliary.</p>
+        <a class="text-action" href="assets/applications/FOE-Auxiliary-Application.pdf" target="_blank" rel="noopener">Download Auxiliary Application</a>
       </article>
     </section>
 
