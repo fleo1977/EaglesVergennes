@@ -1428,6 +1428,19 @@ body.calendar-overlay-open {
     grid-template-columns: 36px repeat(7, minmax(0, 1fr));
   }
 
+  .calendar-time-column,
+  .calendar-day-column {
+    background-image: repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--hour-height) - 1px), rgba(231, 225, 216, 0.58) calc(var(--hour-height) - 1px), rgba(231, 225, 216, 0.58) var(--hour-height));
+    border-right-color: rgba(231, 225, 216, 0.68);
+  }
+
+  .calendar-time-column::before,
+  .calendar-day-column::before,
+  .calendar-time-column::after,
+  .calendar-day-column::after {
+    border-bottom-color: rgba(231, 225, 216, 0.58);
+  }
+
   .calendar-day-heading {
     min-width: 0;
     padding: 8px 1px;
@@ -1439,8 +1452,18 @@ body.calendar-overlay-open {
 
   .calendar-time-label {
     right: 1px;
+    z-index: 5;
     padding: 0 1px;
+    color: var(--muted);
     font-size: 0.58rem;
+    font-weight: 400;
+    line-height: 1;
+    background: white;
+  }
+
+  .calendar-time-label:last-child {
+    color: var(--muted);
+    background: white;
   }
 
   .calendar-event {
