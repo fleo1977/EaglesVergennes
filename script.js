@@ -107,6 +107,8 @@ if (weekGrid) {
   let visibleWeek = new Date();
   let calendarEvents = [];
   let expandedEventIndex = null;
+  const mobileCalendarQuery = window.matchMedia('(max-width: 720px)');
+  const isMobileCalendar = () => mobileCalendarQuery.matches;
 
   const startOfMonday = (date) => {
     const result = new Date(date);
@@ -119,7 +121,7 @@ if (weekGrid) {
   const renderSelectedEventDetails = () => {
     if (!calendarDetailsPanel) return;
     const event = Number.isInteger(expandedEventIndex) ? calendarEvents[expandedEventIndex] : null;
-    if (!event) {
+    if (!event || !isMobileCalendar()) {
       calendarDetailsPanel.hidden = true;
       calendarDetailsPanel.innerHTML = '';
       document.body.classList.remove('calendar-overlay-open');
@@ -195,7 +197,13 @@ if (weekGrid) {
         const end = parseCalendarDate(event.end || event.start);
         const title = escapeHtml(event.title);
         const isExpanded = expandedEventIndex === event.index;
-        const eventButton = (classes, style, time) => `<button class="${classes}${isExpanded ? ' is-expanded' : ''}" type="button" data-event-index="${event.index}" aria-expanded="${isExpanded}" style="${style}"><strong>${title}</strong><time>${time}</time></button>`;
+        const location = event.location ? `<span><b>Location</b>${escapeHtml(event.location)}</span>` : '';
+        const description = event.description ? `<span><b>Details</b>${escapeHtml(event.description)}</span>` : '<span><b>Details</b>No additional details are available for this event.</span>';
+        const link = event.htmlLink || event.link
+          ? `<a href="${escapeHtml(event.htmlLink || event.link)}" target="_blank" rel="noopener">Open in Google Calendar</a>`
+          : '';
+        const details = isExpanded && !isMobileCalendar() ? `<span class="calendar-event-details">${location}${description}${link}</span>` : '';
+        const eventButton = (classes, style, time) => `<button class="${classes}${isExpanded ? ' is-expanded' : ''}" type="button" data-event-index="${event.index}" aria-expanded="${isExpanded}" style="${style}"><strong>${title}</strong><time>${time}</time>${details}</button>`;
         if (event.allDay) {
           return eventButton('calendar-event calendar-event--all-day', '', 'All day');
         }
@@ -238,6 +246,8 @@ if (weekGrid) {
     expandedEventIndex = null;
     renderWeek();
   });
+
+  mobileCalendarQuery.addEventListener('change', renderWeek);
 
   document.querySelector('#previous-week')?.addEventListener('click', () => {
     visibleWeek.setDate(visibleWeek.getDate() - 7);
