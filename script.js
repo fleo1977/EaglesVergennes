@@ -181,7 +181,8 @@ if (weekGrid) {
       const label = new Intl.DateTimeFormat('en-US', { hour: 'numeric' }).format(new Date(2020, 0, 1, hour));
       const offset = index + (calendarStartHour - calendarLayoutStartHour);
       const endLabelClass = hour === calendarEndHour ? ' calendar-time-label--end' : '';
-      return `<span class="calendar-time-label${endLabelClass}" style="top: calc(var(--hour-height) * ${offset})">${label}</span>`;
+      const endLabelStyle = hour === calendarEndHour ? '; color: #626a73 !important; background: #ffffff !important; -webkit-text-fill-color: #626a73' : '';
+      return `<span class="calendar-time-label${endLabelClass}" style="top: calc(var(--hour-height) * ${offset})${endLabelStyle}">${label}</span>`;
     }).join('');
 
     const columns = days.map((day) => {
