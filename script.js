@@ -103,6 +103,7 @@ const weekGrid = document.querySelector('#week-calendar-grid');
 if (weekGrid) {
   const rangeHeading = document.querySelector('#calendar-range');
   const calendarStatus = document.querySelector('#calendar-status');
+  const calendarDetailsPanel = document.querySelector('#calendar-details-panel');
   let visibleWeek = new Date();
   let calendarEvents = [];
   let expandedEventIndex = null;
@@ -113,6 +114,43 @@ if (weekGrid) {
     const day = result.getDay();
     result.setDate(result.getDate() - (day === 0 ? 6 : day - 1));
     return result;
+  };
+
+  const renderSelectedEventDetails = () => {
+    if (!calendarDetailsPanel) return;
+    const event = Number.isInteger(expandedEventIndex) ? calendarEvents[expandedEventIndex] : null;
+    if (!event) {
+      calendarDetailsPanel.hidden = true;
+      calendarDetailsPanel.innerHTML = '';
+      document.body.classList.remove('calendar-overlay-open');
+      return;
+    }
+
+    const start = parseCalendarDate(event.start);
+    const end = parseCalendarDate(event.end || event.start);
+    const location = event.location ? `<p><b>Location</b>${escapeHtml(event.location)}</p>` : '';
+    const description = event.description
+      ? `<p><b>Details</b>${escapeHtml(event.description)}</p>`
+      : '<p><b>Details</b>No additional details are available for this event.</p>';
+    const link = event.htmlLink || event.link
+      ? `<a href="${escapeHtml(event.htmlLink || event.link)}" target="_blank" rel="noopener">Open in Google Calendar</a>`
+      : '';
+
+    calendarDetailsPanel.hidden = false;
+    document.body.classList.add('calendar-overlay-open');
+    calendarDetailsPanel.innerHTML = `
+      <article class="calendar-overlay-card" role="dialog" aria-modal="true" aria-label="${escapeHtml(event.title)} details">
+        <button class="calendar-overlay-close" type="button" aria-label="Close event details">×</button>
+        <div>
+          <span>${formatEventLongDate(start)}</span>
+          <h3>${escapeHtml(event.title)}</h3>
+          <time>${event.allDay ? 'All day' : formatEventTimeRange(start, end)}</time>
+        </div>
+        ${location}
+        ${description}
+        ${link}
+      </article>
+    `;
   };
 
   const renderWeek = () => {
@@ -157,13 +195,7 @@ if (weekGrid) {
         const end = parseCalendarDate(event.end || event.start);
         const title = escapeHtml(event.title);
         const isExpanded = expandedEventIndex === event.index;
-        const location = event.location ? `<span><b>Location</b>${escapeHtml(event.location)}</span>` : '';
-        const description = event.description ? `<span><b>Details</b>${escapeHtml(event.description)}</span>` : '<span><b>Details</b>No additional details are available for this event.</span>';
-        const link = event.htmlLink || event.link
-          ? `<a href="${escapeHtml(event.htmlLink || event.link)}" target="_blank" rel="noopener">Open in Google Calendar</a>`
-          : '';
-        const details = isExpanded ? `<span class="calendar-event-details">${location}${description}${link}</span>` : '';
-        const eventButton = (classes, style, time) => `<button class="${classes}${isExpanded ? ' is-expanded' : ''}" type="button" data-event-index="${event.index}" aria-expanded="${isExpanded}" style="${style}"><strong>${title}</strong><time>${time}</time>${details}</button>`;
+        const eventButton = (classes, style, time) => `<button class="${classes}${isExpanded ? ' is-expanded' : ''}" type="button" data-event-index="${event.index}" aria-expanded="${isExpanded}" style="${style}"><strong>${title}</strong><time>${time}</time></button>`;
         if (event.allDay) {
           return eventButton('calendar-event calendar-event--all-day', '', 'All day');
         }
@@ -175,17 +207,18 @@ if (weekGrid) {
         const clippedEnd = Math.min(endValue, calendarEndHour);
         const top = clippedStart - calendarLayoutStartHour;
         const height = Math.max(clippedEnd - clippedStart, 1);
-        return eventButton('calendar-event', `top: calc(var(--hour-height) * ${top}); height: calc(var(--hour-height) * ${height} - 3px)`, formatEventTimeRange(start, end));
+        const eventHeight = `calc(var(--hour-height) * ${height} - 3px)`;
+        return eventButton('calendar-event', `--event-height: ${eventHeight}; top: calc(var(--hour-height) * ${top}); height: var(--event-height)`, formatEventTimeRange(start, end));
       }).join('');
 
       return `<div class="calendar-day-column${isToday ? ' is-today' : ''}">${eventMarkup}</div>`;
     }).join('');
 
     weekGrid.innerHTML = `${headings}<div class="calendar-time-column">${timeLabels}</div>${columns}`;
+    renderSelectedEventDetails();
   };
 
   weekGrid.addEventListener('click', (event) => {
-    if (event.target.closest('.calendar-event-details a')) return;
     const eventButton = event.target.closest('.calendar-event');
     if (!eventButton) return;
     const eventIndex = Number(eventButton.dataset.eventIndex);
@@ -196,6 +229,12 @@ if (weekGrid) {
 
   document.addEventListener('keydown', (event) => {
     if (event.key !== 'Escape' || expandedEventIndex === null) return;
+    expandedEventIndex = null;
+    renderWeek();
+  });
+
+  calendarDetailsPanel?.addEventListener('click', (event) => {
+    if (event.target !== calendarDetailsPanel && !event.target.closest('.calendar-overlay-close')) return;
     expandedEventIndex = null;
     renderWeek();
   });
