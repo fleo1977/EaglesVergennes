@@ -1442,6 +1442,11 @@ body.calendar-overlay-open {
     border-bottom-color: rgba(231, 225, 216, 0.58);
   }
 
+  .calendar-time-column::before,
+  .calendar-day-column::before {
+    display: none;
+  }
+
   .calendar-day-heading {
     min-width: 0;
     padding: 8px 1px;
@@ -1463,7 +1468,7 @@ body.calendar-overlay-open {
     -webkit-text-fill-color: var(--muted);
   }
 
-  .calendar-time-label:last-child {
+  .calendar-time-label--end {
     color: var(--muted) !important;
     background: white !important;
     -webkit-text-fill-color: var(--muted);
