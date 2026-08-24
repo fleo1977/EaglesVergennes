@@ -18,6 +18,7 @@ dropdownToggles.forEach((toggle) => {
 });
 
 suggestionForm?.addEventListener('submit', (event) => {
+  if (suggestionForm.hasAttribute('action')) return;
   event.preventDefault();
   suggestionForm.reset();
   formStatus.textContent = 'Thanks. Your suggestion has been noted for the next build step.';

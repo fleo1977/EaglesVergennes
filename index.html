@@ -47,7 +47,6 @@
         <a href="calendar.html">Calendar</a>
         <a href="hall-rental.html">Hall Rental</a>
         <a href="officers.html">Officers</a>
-        <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -75,11 +74,6 @@
     </section>
 
     <section class="quick-info" id="about" aria-label="Featured information">
-      <article id="bingo">
-        <p class="card-kicker">Local Events</p>
-        <h2>Wing Wednesday</h2>
-        <p>4:30pm to 6:30pm</p>
-      </article>
       <article id="hall-rental">
         <p class="card-kicker">Membership</p>
         <h2>Aerie Application</h2>
@@ -96,9 +90,9 @@
 
     <section class="suggestions" id="contact" aria-labelledby="suggestions-title">
       <div>
-        <p class="eyebrow">Have an idea?</p>
-        <h2 id="suggestions-title">Suggestions</h2>
-        <p>Share a note for the lodge team. This demo form is ready for a future backend or form service.</p>
+        <p class="eyebrow">Get in touch</p>
+        <h2 id="suggestions-title">Contact</h2>
+        <p>Questions, suggestions, hall rental requests, or membership notes can be sent directly to the Addison County Eagles team.</p>
         <address class="contact-block">
           67 New Haven Rd<br>
           Vergennes, VT 05491<br>
@@ -106,20 +100,24 @@
           addisoncountyeagles@gmail.com
         </address>
       </div>
-      <form class="suggestion-form">
+      <form class="suggestion-form" action="https://formsubmit.co/addisoncountyeagles@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from addisoncountyeagles.org">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label>
           <span>Name</span>
-          <input type="text" name="name" autocomplete="name">
+          <input type="text" name="name" autocomplete="name" required>
         </label>
         <label>
           <span>Email</span>
-          <input type="email" name="email" autocomplete="email">
+          <input type="email" name="email" autocomplete="email" required>
         </label>
         <label>
-          <span>Suggestion</span>
-          <textarea name="suggestion" rows="4"></textarea>
+          <span>Message</span>
+          <textarea name="message" rows="4" required></textarea>
         </label>
-        <button class="button primary" type="submit">Submit Suggestion</button>
+        <button class="button primary" type="submit">Send Message</button>
         <p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
