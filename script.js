@@ -26,15 +26,30 @@ suggestionForm?.addEventListener('submit', (event) => {
 
 const calendarDataUrl = 'data/events.json';
 const calendarTimeZone = 'America/New_York';
-const calendarStartHour = 8;
-const calendarEndHour = 22;
-const calendarLayoutStartHour = 7.5;
+const calendarStartHour = 9;
+const calendarEndHour = 23;
+const calendarLayoutStartHour = 8.5;
 
 const parseCalendarDate = (value) => new Date(value);
+
+const escapeHtml = (value = '') => String(value)
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#039;');
 
 const formatEventDate = (date) => new Intl.DateTimeFormat('en-US', {
   month: 'short',
   day: 'numeric',
+  timeZone: calendarTimeZone,
+}).format(date);
+
+const formatEventLongDate = (date) => new Intl.DateTimeFormat('en-US', {
+  weekday: 'long',
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
   timeZone: calendarTimeZone,
 }).format(date);
 
@@ -43,6 +58,12 @@ const formatEventTime = (date) => new Intl.DateTimeFormat('en-US', {
   minute: '2-digit',
   timeZone: calendarTimeZone,
 }).format(date);
+
+const formatEventTimeRange = (start, end) => (
+  start.getTime() === end.getTime()
+    ? formatEventTime(start)
+    : `${formatEventTime(start)} to ${formatEventTime(end)}`
+);
 
 const loadCalendarEvents = async () => {
   const response = await fetch(calendarDataUrl, { cache: 'no-store' });
@@ -84,6 +105,7 @@ if (weekGrid) {
   const calendarStatus = document.querySelector('#calendar-status');
   let visibleWeek = new Date();
   let calendarEvents = [];
+  let expandedEventIndex = null;
 
   const startOfMonday = (date) => {
     const result = new Date(date);
@@ -125,7 +147,7 @@ if (weekGrid) {
       const isToday = day.getTime() === today.getTime();
       const nextDay = new Date(day);
       nextDay.setDate(nextDay.getDate() + 1);
-      const dayEvents = calendarEvents.filter((event) => {
+      const dayEvents = calendarEvents.map((event, index) => ({ ...event, index })).filter((event) => {
         const start = parseCalendarDate(event.start);
         return start >= day && start < nextDay;
       });
@@ -133,8 +155,17 @@ if (weekGrid) {
       const eventMarkup = dayEvents.map((event) => {
         const start = parseCalendarDate(event.start);
         const end = parseCalendarDate(event.end || event.start);
+        const title = escapeHtml(event.title);
+        const isExpanded = expandedEventIndex === event.index;
+        const location = event.location ? `<span><b>Location</b>${escapeHtml(event.location)}</span>` : '';
+        const description = event.description ? `<span><b>Details</b>${escapeHtml(event.description)}</span>` : '<span><b>Details</b>No additional details are available for this event.</span>';
+        const link = event.htmlLink || event.link
+          ? `<a href="${escapeHtml(event.htmlLink || event.link)}" target="_blank" rel="noopener">Open in Google Calendar</a>`
+          : '';
+        const details = isExpanded ? `<span class="calendar-event-details">${location}${description}${link}</span>` : '';
+        const eventButton = (classes, style, time) => `<button class="${classes}${isExpanded ? ' is-expanded' : ''}" type="button" data-event-index="${event.index}" aria-expanded="${isExpanded}" style="${style}"><strong>${title}</strong><time>${time}</time>${details}</button>`;
         if (event.allDay) {
-          return `<div class="calendar-event calendar-event--all-day"><strong>${event.title}</strong><time>All day</time></div>`;
+          return eventButton('calendar-event calendar-event--all-day', '', 'All day');
         }
 
         const startValue = start.getHours() + start.getMinutes() / 60;
@@ -143,8 +174,8 @@ if (weekGrid) {
         const clippedStart = Math.max(startValue, calendarStartHour);
         const clippedEnd = Math.min(endValue, calendarEndHour);
         const top = clippedStart - calendarLayoutStartHour;
-        const height = Math.max(clippedEnd - clippedStart, 0.5);
-        return `<div class="calendar-event" style="top: calc(var(--hour-height) * ${top}); height: calc(var(--hour-height) * ${height} - 3px)"><strong>${event.title}</strong><time>${formatEventTime(start)}–${formatEventTime(end)}</time></div>`;
+        const height = Math.max(clippedEnd - clippedStart, 1);
+        return eventButton('calendar-event', `top: calc(var(--hour-height) * ${top}); height: calc(var(--hour-height) * ${height} - 3px)`, formatEventTimeRange(start, end));
       }).join('');
 
       return `<div class="calendar-day-column${isToday ? ' is-today' : ''}">${eventMarkup}</div>`;
@@ -153,18 +184,37 @@ if (weekGrid) {
     weekGrid.innerHTML = `${headings}<div class="calendar-time-column">${timeLabels}</div>${columns}`;
   };
 
+  weekGrid.addEventListener('click', (event) => {
+    if (event.target.closest('.calendar-event-details a')) return;
+    const eventButton = event.target.closest('.calendar-event');
+    if (!eventButton) return;
+    const eventIndex = Number(eventButton.dataset.eventIndex);
+    expandedEventIndex = expandedEventIndex === eventIndex ? null : eventIndex;
+    renderWeek();
+    weekGrid.querySelector(`[data-event-index="${eventIndex}"]`)?.focus();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || expandedEventIndex === null) return;
+    expandedEventIndex = null;
+    renderWeek();
+  });
+
   document.querySelector('#previous-week')?.addEventListener('click', () => {
     visibleWeek.setDate(visibleWeek.getDate() - 7);
+    expandedEventIndex = null;
     renderWeek();
   });
 
   document.querySelector('#next-week')?.addEventListener('click', () => {
     visibleWeek.setDate(visibleWeek.getDate() + 7);
+    expandedEventIndex = null;
     renderWeek();
   });
 
   document.querySelector('#current-week')?.addEventListener('click', () => {
     visibleWeek = new Date();
+    expandedEventIndex = null;
     renderWeek();
   });
 

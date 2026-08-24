@@ -30,6 +30,13 @@ def iso_value(value):
     raise TypeError(f"Unsupported calendar date: {value!r}")
 
 
+def text_value(component, key):
+    value = component.get(key)
+    if value is None:
+        return ""
+    return str(value).strip()
+
+
 def main():
     with urlopen(CALENDAR_URL, timeout=30) as response:
         calendar = Calendar.from_ical(response.read())
@@ -43,13 +50,26 @@ def main():
         start, all_day = iso_value(component.decoded("DTSTART"))
         end_value = component.decoded("DTEND") if component.get("DTEND") else component.decoded("DTSTART")
         end, _ = iso_value(end_value)
+        event = {
+            "title": str(component.get("SUMMARY", "Untitled event")),
+            "start": start,
+            "end": end,
+            "allDay": all_day,
+        }
+
+        description = text_value(component, "DESCRIPTION")
+        location = text_value(component, "LOCATION")
+        link = text_value(component, "URL")
+
+        if description:
+            event["description"] = description
+        if location:
+            event["location"] = location
+        if link:
+            event["link"] = link
+
         events.append(
-            {
-                "title": str(component.get("SUMMARY", "Untitled event")),
-                "start": start,
-                "end": end,
-                "allDay": all_day,
-            }
+            event
         )
 
     events.sort(key=lambda event: event["start"])
