@@ -620,6 +620,8 @@ h1 {
 }
 
 .quick-info article {
+  display: flex;
+  flex-direction: column;
   padding: 28px;
 }
 
@@ -633,6 +635,10 @@ h1 {
   margin-top: 6px;
   color: var(--blue);
   font-weight: 800;
+}
+
+.quick-info .text-action {
+  margin-top: auto;
 }
 
 .contact-block {
