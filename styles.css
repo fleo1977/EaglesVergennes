@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
@@ -1454,16 +1455,18 @@ body.calendar-overlay-open {
     right: 1px;
     z-index: 5;
     padding: 0 1px;
-    color: var(--muted);
+    color: var(--muted) !important;
     font-size: 0.58rem;
     font-weight: 400;
     line-height: 1;
-    background: white;
+    background: white !important;
+    -webkit-text-fill-color: var(--muted);
   }
 
   .calendar-time-label:last-child {
-    color: var(--muted);
-    background: white;
+    color: var(--muted) !important;
+    background: white !important;
+    -webkit-text-fill-color: var(--muted);
   }
 
   .calendar-event {
