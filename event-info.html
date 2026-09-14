@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hall rental information for Addison County Eagles in Vergennes, Vermont.">
-  <title>Hall Rental | Addison County Eagles</title>
+  <meta name="description" content="Event information for Addison County Eagles in Vergennes, Vermont.">
+  <title>Event Info | Addison County Eagles</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="event-info.css">
+  <script src="event-info.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -33,8 +35,8 @@
           </div>
         </div>
         <a href="calendar.html">Calendar</a>
-        <a href="event-info.html">Event Info</a>
-        <a href="hall-rental.html" aria-current="page">Hall Rental</a>
+        <a href="event-info.html" aria-current="page">Event Info</a>
+        <a href="hall-rental.html">Hall Rental</a>
         <a href="officers.html">Officers</a>
       </div>
     </nav>
@@ -44,17 +46,34 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="index.html">Home</a>
       <span aria-hidden="true">»</span>
-      <span>Hall Rental</span>
+      <span>Event Info</span>
     </nav>
-    <p class="eyebrow">Celebrate With Us</p>
-    <h1>Hall Rental</h1>
-    <p>More to come.</p>
+    <h1>Event Info</h1>
+    <p id="event-load-status" role="status"></p>
+    <article id="event-display" hidden>
+      <img id="event-picture" alt="Event flyer" hidden>
+      <p id="event-description"></p>
+    </article>
+    <section id="event-editor" aria-labelledby="editor-title" hidden>
+      <h2 id="editor-title">Edit Event Info</h2>
+      <form id="event-form">
+        <label for="event-upload">Event picture</label>
+        <input id="event-upload" name="picture" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="upload-help">
+        <small id="upload-help">JPG, PNG or WebP, up to 5 MB. Leave empty to keep the current picture.</small>
+        <label for="event-text">Description</label>
+        <textarea id="event-text" name="description" rows="6" maxlength="10000" placeholder="Add the event details…"></textarea>
+        <button class="button primary" type="submit">Save Event Info</button>
+        <p id="event-status" role="status"></p>
+      </form>
+      <form method="post" action="/api/logout"><button class="button event-sign-out" type="submit">Sign Out</button></form>
+    </section>
   </main>
 
   <footer class="footer">
-    <p>Copyright &copy; 2026, Addison County Eagles. All Rights Reserved</p>
+    <p>Copyright &copy; 2026, <span id="admin-entry">Addison County Eagles</span>. All Rights Reserved</p>
     <a href="privacy-policy.html">Privacy Policy</a>
   </footer>
   <script src="script.js"></script>
+  <script src="admin-entry.js"></script>
 </body>
 </html>

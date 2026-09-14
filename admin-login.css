@@ -1,0 +1,65 @@
+.back-home {
+  transition: color 150ms ease;
+  text-underline-offset: 4px;
+}
+
+.back-home:hover,
+.back-home:focus-visible {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.admin-login {
+  width: min(440px, calc(100% - 32px));
+  margin: 64px auto;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+  color: var(--blue-dark);
+}
+
+.admin-card {
+  margin: 28px 0 20px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.admin-card h1 {
+  margin: 0 0 24px;
+}
+
+#admin-login-form {
+  display: grid;
+  gap: 10px;
+}
+
+#admin-login-form label {
+  font-weight: 700;
+}
+
+#admin-login-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+}
+
+#admin-login-form input:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+#login-status {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}

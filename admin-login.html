@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin Login | Addison County Eagles</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin-login.css">
+  <script src="admin-login.js" defer></script>
+</head>
+<body>
+  <main class="admin-login">
+    <a class="admin-brand" href="index.html">
+      <img src="assets/eagle-logo.png" alt="FOE eagle logo" width="72">
+      <span>Addison County Eagles</span>
+    </a>
+    <section class="admin-card" aria-labelledby="login-title">
+      <p class="eyebrow">Members of the administration</p>
+      <h1 id="login-title">Admin Login</h1>
+      <form id="admin-login-form" method="post">
+        <label for="username">Username</label>
+        <input id="username" name="username" autocomplete="username" required disabled>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required disabled>
+        <button class="button primary" id="sign-in" type="submit" disabled>Sign In</button>
+        <p id="login-status" role="status">Sign-in is not available yet. Please contact the site administrator.</p>
+      </form>
+    </section>
+    <a class="back-home" href="index.html">Back to home</a>
+  </main>
+</body>
+</html>
