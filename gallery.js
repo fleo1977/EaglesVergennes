@@ -84,7 +84,7 @@ async function loadGallery() {
     const response = await fetch('data/gallery.json', { cache: 'no-store' });
     if (!response.ok) throw new Error();
     gallery = await response.json();
-    notice.textContent = gallery.events.length ? '' : 'Event photos will appear here.';
+    notice.textContent = '';
     render();
   } catch { notice.textContent = 'The gallery is temporarily unavailable. Please try again later.'; return; }
   try {
