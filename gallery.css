@@ -19,3 +19,12 @@
 #photo-viewer::backdrop { background: #000b; }
 #full-photo { max-width: 85vw; max-height: 78vh; object-fit: contain; }
 #close-photo { display: block; margin: 0 0 12px auto; padding: 8px 16px; cursor: pointer; }
+
+/* Keep the admin session action beneath all gallery content. */
+#main { display: flex; flex-direction: column; min-height: 70vh; }
+#gallery-sign-out { margin-top: auto; padding-top: 32px; border-top: 1px solid var(--line); }
+.gallery-photo { position: relative; }
+.gallery-more { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(0, 0, 0, .58); color: white; font-size: 2.5rem; font-weight: 700; cursor: pointer; transition: background-color 150ms; }
+.gallery-photo:hover .gallery-more { background: rgba(0, 0, 0, .7); }
+.gallery-upload { margin-top: 24px; }
+.gallery-photo:focus-visible, #main .button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }

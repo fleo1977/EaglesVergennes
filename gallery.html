@@ -60,10 +60,12 @@
         <input id="album-date" name="date" type="date" required>
         <button class="button" type="submit">Add Event</button>
       </form>
-      <form action="/api/logout" method="post"><button class="button sign-out" type="submit">Sign Out</button></form>
     </section>
     <p id="gallery-status" role="status">Loading gallery…</p>
     <div id="gallery-albums"></div>
+    <div id="gallery-sign-out" hidden>
+      <form action="/api/logout" method="post"><button class="button sign-out" type="submit">Sign Out</button></form>
+    </div>
     <dialog id="photo-viewer">
       <button type="button" id="close-photo" aria-label="Close photo">Close</button>
       <img id="full-photo" alt="">

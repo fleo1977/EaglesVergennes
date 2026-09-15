@@ -2,6 +2,7 @@ const albums = document.querySelector('#gallery-albums');
 const notice = document.querySelector('#gallery-status');
 const create = document.querySelector('#gallery-create');
 const viewer = document.querySelector('#photo-viewer');
+const expandedAlbums = new Set();
 let authenticated = false;
 let gallery = { events: [] };
 function element(tag, text, className) {
@@ -19,18 +20,43 @@ function render() {
     day.dateTime = event.date;
     card.append(day);
     const photos = element('div', '', 'gallery-photos');
-    event.photos.forEach((photo, index) => {
+    const expanded = expandedAlbums.has(event.id);
+    const previewPhotos = expanded ? event.photos : event.photos.slice(0, 4);
+    previewPhotos.forEach((photo, index) => {
       const button = element('button', '', 'gallery-photo');
       button.type = 'button';
       const img = element('img');
       img.src = photo.url; img.alt = `${event.title} — photo ${index + 1}`; img.loading = 'lazy';
       button.append(img);
+      const remaining = event.photos.length - 3;
+      const showMore = !expanded && event.photos.length > 4 && index === 3;
+      if (showMore) {
+        button.append(element('span', `+${remaining}`, 'gallery-more'));
+        button.setAttribute('aria-label', `View ${remaining} more pictures from ${event.title}`);
+        button.setAttribute('aria-expanded', 'false');
+      }
       button.addEventListener('click', () => {
+        if (showMore) {
+          expandedAlbums.add(event.id); render();
+          document.getElementById(`collapse-${event.id}`)?.focus();
+          return;
+        }
         const full = document.querySelector('#full-photo'); full.src = photo.url; full.alt = img.alt; viewer.showModal();
       });
       photos.append(button);
     });
     card.append(photos);
+    if (expanded && event.photos.length > 4) {
+      const collapse = element('button', 'Show fewer pictures', 'button');
+      collapse.type = 'button'; collapse.id = `collapse-${event.id}`;
+      collapse.setAttribute('aria-expanded', 'true');
+      collapse.addEventListener('click', () => {
+        expandedAlbums.delete(event.id); render();
+        document.getElementById(`album-${event.id}`)?.querySelector('[aria-expanded]')?.focus();
+      });
+      card.append(collapse);
+    }
+    card.id = `album-${event.id}`;
     if (!event.photos.length) card.append(element('p', 'No pictures added yet.'));
     if (authenticated) {
       const form = element('form', '', 'gallery-upload');
@@ -91,6 +117,7 @@ async function loadGallery() {
     const response = await fetch('/api/session', { cache: 'no-store' });
     authenticated = response.ok && (await response.json()).authenticated === true;
     document.querySelector('#gallery-admin').hidden = !authenticated;
+    document.querySelector('#gallery-sign-out').hidden = !authenticated;
     render();
   } catch { /* Static hosting offers public viewing only. */ }
 }
