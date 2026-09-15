@@ -1,0 +1,21 @@
+#main { width: min(1120px, calc(100% - 32px)); }
+#main h1 { max-width: none; }
+#gallery-admin, .gallery-album { padding: 24px; margin: 28px 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+#gallery-create, .gallery-upload { display: grid; gap: 12px; margin-bottom: 20px; }
+#gallery-create { max-width: 540px; }
+#main input { padding: 12px; width: 100%; min-width: 0; font: inherit; border: 1px solid var(--line); border-radius: 8px; }
+#main label { font-weight: bold; }
+#main .button { background: var(--blue); color: white; cursor: pointer; justify-self: start; transition: background-color 150ms; }
+#main .button:hover { background: var(--blue-dark); }
+#main .sign-out { background: var(--red); }
+#main .sign-out:hover { background: #941f28; }
+#main button:disabled { opacity: .6; cursor: wait; }
+.gallery-album h2 { overflow-wrap: anywhere; }
+.gallery-album time { display: block; margin: 10px 0 20px; color: var(--muted); }
+.gallery-photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); gap: 16px; margin-bottom: 20px; }
+.gallery-photo { border: 0; padding: 0; background: transparent; cursor: zoom-in; border-radius: 10px; overflow: hidden; }
+.gallery-photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+#photo-viewer { max-width: 94vw; max-height: 94vh; border: 0; border-radius: 12px; padding: 16px; }
+#photo-viewer::backdrop { background: #000b; }
+#full-photo { max-width: 85vw; max-height: 78vh; object-fit: contain; }
+#close-photo { display: block; margin: 0 0 12px auto; padding: 8px 16px; cursor: pointer; }

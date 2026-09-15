@@ -1,4 +1,5 @@
 """Local admin server. Run with python3 server.py; production requires HTTPS hosting."""
+from datetime import date
 import base64
 import io
 import warnings
@@ -71,6 +72,8 @@ class Handler(SimpleHTTPRequestHandler):
         origin = self.headers.get('Origin')
         if origin and origin != 'http://' + self.headers.get('Host', ''):
             return self.send_error(403)
+        if self.path in {'/api/gallery/events', '/api/gallery/photos'}:
+            return self.save_gallery()
         if self.path == '/api/event-info':
             return self.save_event()
         if self.path == '/api/logout':
@@ -146,6 +149,54 @@ class Handler(SimpleHTTPRequestHandler):
         except (ValueError, KeyError, TypeError, AttributeError, OSError, Image.DecompressionBombError, Image.DecompressionBombWarning):
             return self.reply(400, 'Use a valid JPG, PNG or WebP under 5 MB and a description under 10,000 characters.')
         return self.reply(200, result)
+
+    def save_gallery(self):
+        if SESSIONS.get(self.token(), 0) <= time.time():
+            return self.reply(401, 'Please sign in again before making changes.')
+        try:
+            length = int(self.headers.get('Content-Length', '0'))
+            if not 0 < length <= 7 * 1024 * 1024:
+                return self.reply(413, 'Choose a picture smaller than 5 MB.')
+            data = json.loads(self.rfile.read(length))
+            path = ROOT / 'data/gallery.json'
+            gallery = json.loads(path.read_text()) if path.exists() else {'events': []}
+            if self.path == '/api/gallery/events':
+                title = data['title'].strip()
+                day = date.fromisoformat(data['date']).isoformat()
+                if not title or len(title) > 120:
+                    raise ValueError()
+                album = {'id': secrets.token_hex(16), 'title': title, 'date': day, 'photos': []}
+                gallery['events'].append(album)
+            else:
+                album = next((e for e in gallery['events'] if e['id'] == data['eventId']), None)
+                if album is None:
+                    return self.reply(404, 'Event not found. Refresh the gallery.')
+                header, encoded = data['image'].split(',', 1)
+                if header not in {'data:image/png;base64', 'data:image/jpeg;base64', 'data:image/webp;base64'}:
+                    raise ValueError()
+                raw = base64.b64decode(encoded, validate=True)
+                if len(raw) > 5 * 1024 * 1024:
+                    raise ValueError()
+                with warnings.catch_warnings():
+                    warnings.simplefilter('error', Image.DecompressionBombWarning)
+                    with Image.open(io.BytesIO(raw)) as uploaded:
+                        if uploaded.format not in {'PNG', 'JPEG', 'WEBP'} or uploaded.width * uploaded.height > 20000000:
+                            raise ValueError()
+                        image = ImageOps.exif_transpose(uploaded)
+                        image.thumbnail((2400, 2400))
+                        output = io.BytesIO()
+                        image.convert('RGB').save(output, format='JPEG', quality=90)
+                folder = ROOT / 'assets/gallery'
+                folder.mkdir(exist_ok=True)
+                name = secrets.token_hex(16) + '.jpg'
+                (folder / name).write_bytes(output.getvalue())
+                album['photos'].append({'id': name[:-4], 'url': 'assets/gallery/' + name})
+            temporary = path.with_suffix('.tmp')
+            temporary.write_text(json.dumps(gallery))
+            temporary.replace(path)
+        except (ValueError, KeyError, TypeError, AttributeError, OSError, Image.DecompressionBombError, Image.DecompressionBombWarning):
+            return self.reply(400, 'Check the title and date, or use a valid JPG, PNG or WebP picture under 5 MB.')
+        return self.reply(200, gallery)
 
     def reply(self, status, message, cookie=None):
         body = json.dumps(message if isinstance(message, dict) else {'message': message}).encode()
