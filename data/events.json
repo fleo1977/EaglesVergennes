@@ -1,20 +1,6 @@
 {
-  "updated": "2026-09-15T21:27:05.889409+00:00",
+  "updated": "2026-09-16T00:24:36.669615+00:00",
   "events": [
-    {
-      "title": "Aux Meeting",
-      "start": "2026-09-08T23:00:00Z",
-      "end": "2026-09-09T00:00:00Z",
-      "allDay": false,
-      "description": "(Bill Munson added)"
-    },
-    {
-      "title": "Aerie Meeting",
-      "start": "2026-09-08T23:00:00Z",
-      "end": "2026-09-09T00:00:00Z",
-      "allDay": false,
-      "description": "(Bill Munson added)"
-    },
     {
       "title": "Queen of Hearts Drawing",
       "start": "2026-09-09T23:00:00Z",
