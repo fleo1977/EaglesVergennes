@@ -64,7 +64,7 @@
     <p id="gallery-status" role="status">Loading gallery…</p>
     <div id="gallery-albums"></div>
     <div id="gallery-sign-out" hidden>
-      <form action="/api/logout" method="post"><button class="button sign-out" type="submit">Sign Out</button></form>
+      <form action="/api/logout?returnTo=/gallery.html" method="post"><button class="button sign-out" type="submit">Sign Out</button></form>
     </div>
     <dialog id="photo-viewer">
       <button type="button" id="close-photo" aria-label="Close photo">Close</button>

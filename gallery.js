@@ -47,7 +47,7 @@ function render() {
     });
     card.append(photos);
     if (expanded && event.photos.length > 4) {
-      const collapse = element('button', 'Show fewer pictures', 'button');
+      const collapse = element('button', 'Show fewer pictures', 'button gallery-collapse');
       collapse.type = 'button'; collapse.id = `collapse-${event.id}`;
       collapse.setAttribute('aria-expanded', 'true');
       collapse.addEventListener('click', () => {

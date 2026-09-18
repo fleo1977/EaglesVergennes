@@ -24,7 +24,10 @@
 #main { display: flex; flex-direction: column; min-height: 70vh; }
 #gallery-sign-out { margin-top: auto; padding-top: 32px; border-top: 1px solid var(--line); }
 .gallery-photo { position: relative; }
-.gallery-more { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(0, 0, 0, .58); color: white; font-size: 2.5rem; font-weight: 700; cursor: pointer; transition: background-color 150ms; }
-.gallery-photo:hover .gallery-more { background: rgba(0, 0, 0, .7); }
+.gallery-more { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(0, 0, 0, .35); color: white; font-size: 2.5rem; font-weight: 700; cursor: pointer; transition: background-color 150ms; }
+.gallery-photo:hover .gallery-more { background: rgba(0, 0, 0, .48); }
 .gallery-upload { margin-top: 24px; }
 .gallery-photo:focus-visible, #main .button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+
+#main .gallery-collapse { display: flex; margin-left: auto; background: #e7e9ec; color: var(--ink); }
+#main .gallery-collapse:hover { background: #cdd2d8; }

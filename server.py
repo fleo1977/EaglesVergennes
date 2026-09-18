@@ -12,7 +12,7 @@ import time
 from http.cookies import SimpleCookie
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 from pathlib import Path
-from urllib.parse import urlsplit, unquote
+from urllib.parse import urlsplit, unquote, parse_qs
 
 ROOT = Path(__file__).resolve().parent
 ACCOUNT = json.loads((ROOT / '.admin-account.json').read_text())
@@ -76,9 +76,12 @@ class Handler(SimpleHTTPRequestHandler):
             return self.save_gallery()
         if self.path == '/api/event-info':
             return self.save_event()
-        if self.path == '/api/logout':
+        if urlsplit(self.path).path == '/api/logout':
             SESSIONS.pop(self.token(), None)
-            return self.redirect('/admin-login.html', 'eagles_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0')
+            destination = parse_qs(urlsplit(self.path).query).get('returnTo', ['/index.html'])[0]
+            if destination not in {'/index.html', '/event-info.html', '/gallery.html'}:
+                destination = '/index.html'
+            return self.redirect(destination, 'eagles_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0')
         if self.path != '/api/login':
             return self.send_error(404)
         now = time.time()
