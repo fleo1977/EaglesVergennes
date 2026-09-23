@@ -41,6 +41,9 @@
 .gallery-remove-photo:focus-visible { outline: 3px solid white; outline-offset: 2px; }
 
 @media (max-width: 720px) {
+  #photo-viewer[open] { display: flex; flex-direction: column; }
+  #full-photo { order: 0; min-height: 0; }
+  #close-photo { order: 1; flex-shrink: 0; align-self: flex-end; margin: 12px 0 0; min-height: 44px; }
   .gallery-album { padding: 12px; }
   .gallery-photos { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
   .gallery-photo { border-radius: 6px; }
