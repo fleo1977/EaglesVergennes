@@ -39,3 +39,12 @@
 .gallery-remove-photo { position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; padding: 0; display: grid; place-items: center; border: 0; border-radius: 50%; background: rgba(0, 0, 0, .65); color: white; font-size: 25px; line-height: 1; cursor: pointer; transition: background-color 150ms; }
 .gallery-remove-photo:hover { background: var(--red); }
 .gallery-remove-photo:focus-visible { outline: 3px solid white; outline-offset: 2px; }
+
+@media (max-width: 720px) {
+  .gallery-album { padding: 12px; }
+  .gallery-photos { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+  .gallery-photo { border-radius: 6px; }
+  .gallery-photo img { aspect-ratio: 1; }
+  .gallery-more { font-size: 1.1rem; }
+  .gallery-remove-photo { top: 2px; right: 2px; width: 24px; height: 24px; font-size: 20px; }
+}

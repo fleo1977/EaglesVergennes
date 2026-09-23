@@ -3,6 +3,8 @@ const notice = document.querySelector('#gallery-status');
 const create = document.querySelector('#gallery-create');
 const viewer = document.querySelector('#photo-viewer');
 const expandedAlbums = new Set();
+const mobileGallery = window.matchMedia('(max-width: 720px)');
+mobileGallery.addEventListener('change', () => render());
 let authenticated = false;
 let gallery = { events: [] };
 function element(tag, text, className) {
@@ -21,15 +23,16 @@ function render() {
     card.append(day);
     const photos = element('div', '', 'gallery-photos');
     const expanded = expandedAlbums.has(event.id);
-    const previewPhotos = expanded ? event.photos : event.photos.slice(0, 4);
+    const previewLimit = mobileGallery.matches ? 5 : 4;
+    const previewPhotos = expanded ? event.photos : event.photos.slice(0, previewLimit);
     previewPhotos.forEach((photo, index) => {
       const button = element('button', '', 'gallery-photo');
       button.type = 'button';
       const img = element('img');
       img.src = photo.url; img.alt = `${event.title} — photo ${index + 1}`; img.loading = 'lazy';
       button.append(img);
-      const remaining = event.photos.length - 3;
-      const showMore = !expanded && event.photos.length > 4 && index === 3;
+      const remaining = event.photos.length - (previewLimit - 1);
+      const showMore = !expanded && event.photos.length > previewLimit && index === previewLimit - 1;
       if (showMore) {
         button.append(element('span', `+${remaining}`, 'gallery-more'));
         button.setAttribute('aria-label', `View ${remaining} more pictures from ${event.title}`);
@@ -58,7 +61,7 @@ function render() {
       photos.append(tile);
     });
     card.append(photos);
-    if (expanded && event.photos.length > 4) {
+    if (expanded && event.photos.length > previewLimit) {
       const collapse = element('button', 'Show fewer pictures', 'button gallery-collapse');
       collapse.type = 'button'; collapse.id = `collapse-${event.id}`;
       collapse.setAttribute('aria-expanded', 'true');
