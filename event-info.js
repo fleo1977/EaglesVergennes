@@ -22,6 +22,7 @@ async function load() {
     const response = await fetch('/api/session', { cache: 'no-store' });
     if (response.ok && (await response.json()).authenticated) {
       editor.hidden = false;
+      document.querySelector('#event-sign-out-area').hidden = false;
       form.elements.description.value = saved.description || '';
     }
   } catch { /* Public visitors do not need an admin session. */ }

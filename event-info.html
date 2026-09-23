@@ -66,8 +66,10 @@
         <button class="button primary" type="submit">Save Event Info</button>
         <p id="event-status" role="status"></p>
       </form>
-      <form method="post" action="/api/logout?returnTo=/event-info.html"><button class="button event-sign-out" type="submit">Sign Out</button></form>
     </section>
+    <div id="event-sign-out-area" hidden>
+      <form method="post" action="/api/logout?returnTo=/event-info.html"><button class="button event-sign-out" type="submit">Sign Out</button></form>
+    </div>
   </main>
 
   <footer class="footer">

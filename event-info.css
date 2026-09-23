@@ -17,7 +17,8 @@
 #event-form button { justify-self: start; }
 #event-status { color: var(--muted); }
 
-#event-editor .button {
+#event-editor .button,
+#event-sign-out-area .button {
   color: white;
   cursor: pointer;
   transition: background-color 150ms ease;
@@ -25,8 +26,12 @@
 #event-form .button { background: var(--blue); }
 #event-form .button:hover:not(:disabled),
 #event-form .button:focus-visible { background: var(--blue-dark); }
-#event-editor .event-sign-out { background: var(--red); }
-#event-editor .event-sign-out:hover,
-#event-editor .event-sign-out:focus-visible { background: #941f28; }
-#event-editor .button:focus-visible { outline: 2px solid var(--blue-dark); outline-offset: 3px; }
+#event-sign-out-area .event-sign-out { background: var(--red); }
+#event-sign-out-area .event-sign-out:hover,
+#event-sign-out-area .event-sign-out:focus-visible { background: #941f28; }
+#event-editor .button:focus-visible,
+#event-sign-out-area .button:focus-visible { outline: 2px solid var(--blue-dark); outline-offset: 3px; }
 #event-editor .button:disabled { opacity: 0.65; cursor: wait; }
+
+#main.placeholder-page { display: flex; flex-direction: column; min-height: 70vh; }
+#event-sign-out-area { margin-top: auto; padding-top: 32px; border-top: 1px solid var(--line); }
