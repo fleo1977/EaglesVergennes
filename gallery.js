@@ -43,7 +43,18 @@ function render() {
         }
         const full = document.querySelector('#full-photo'); full.src = photo.url; full.alt = img.alt; viewer.showModal();
       });
-      photos.append(button);
+      const tile = element('div', '', 'gallery-tile');
+      tile.append(button);
+      if (authenticated && !showMore) {
+        const remove = element('button', 'Remove Picture', 'button gallery-remove');
+        remove.type = 'button';
+        remove.setAttribute('aria-label', `Remove picture ${index + 1} from ${event.title}`);
+        remove.addEventListener('click', () => removeItem(remove, '/api/gallery/delete-photo',
+          { eventId: event.id, photoId: photo.id },
+          `Remove picture ${index + 1} from “${event.title}”?`, 'Picture removed.'));
+        tile.append(remove);
+      }
+      photos.append(tile);
     });
     card.append(photos);
     if (expanded && event.photos.length > 4) {
@@ -86,9 +97,28 @@ function render() {
         } finally { button.disabled = false; }
       });
       card.append(form);
+      const deleteEvent = element('button', 'Delete Event', 'button gallery-remove');
+      deleteEvent.type = 'button';
+      deleteEvent.addEventListener('click', () => removeItem(deleteEvent, '/api/gallery/delete-event',
+        { eventId: event.id },
+        `Delete “${event.title}” (${event.date}) and remove all ${event.photos.length} pictures from the gallery?`, 'Event deleted.'));
+      card.append(deleteEvent);
     }
     albums.append(card);
   }
+}
+async function removeItem(button, url, data, confirmation, success) {
+  if (!window.confirm(confirmation)) return;
+  button.disabled = true;
+  try {
+    gallery = await post(url, data);
+    if (url.endsWith('delete-event')) expandedAlbums.delete(data.eventId);
+    render();
+    notice.textContent = success;
+    notice.tabIndex = -1;
+    notice.focus();
+  } catch (error) { notice.textContent = error.message; }
+  finally { button.disabled = false; }
 }
 async function post(url, data) {
   const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });

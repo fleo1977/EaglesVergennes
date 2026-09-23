@@ -72,7 +72,7 @@ class Handler(SimpleHTTPRequestHandler):
         origin = self.headers.get('Origin')
         if origin and origin != 'http://' + self.headers.get('Host', ''):
             return self.send_error(403)
-        if self.path in {'/api/gallery/events', '/api/gallery/photos'}:
+        if self.path in {'/api/gallery/events', '/api/gallery/photos', '/api/gallery/delete-event', '/api/gallery/delete-photo'}:
             return self.save_gallery()
         if self.path == '/api/event-info':
             return self.save_event()
@@ -163,7 +163,24 @@ class Handler(SimpleHTTPRequestHandler):
             data = json.loads(self.rfile.read(length))
             path = ROOT / 'data/gallery.json'
             gallery = json.loads(path.read_text()) if path.exists() else {'events': []}
-            if self.path == '/api/gallery/events':
+            if self.path in {'/api/gallery/delete-event', '/api/gallery/delete-photo'}:
+                album = next((e for e in gallery['events'] if e['id'] == data['eventId']), None)
+                if album is None:
+                    return self.reply(404, 'Event not found. Refresh the gallery.')
+                if self.path == '/api/gallery/delete-event':
+                    removed = album
+                    gallery['events'].remove(album)
+                else:
+                    photo = next((p for p in album['photos'] if p['id'] == data['photoId']), None)
+                    if photo is None:
+                        return self.reply(404, 'Picture not found. Refresh the gallery.')
+                    removed = {'eventId': album['id'], 'photo': photo}
+                    album['photos'].remove(photo)
+                # Retain a private recovery record and original files; remove from public gallery.
+                archive = ROOT / '.gallery-trash'
+                archive.mkdir(exist_ok=True)
+                (archive / (secrets.token_hex(16) + '.json')).write_text(json.dumps(removed))
+            elif self.path == '/api/gallery/events':
                 title = data['title'].strip()
                 day = date.fromisoformat(data['date']).isoformat()
                 if not title or len(title) > 120:

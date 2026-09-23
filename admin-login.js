@@ -1,6 +1,9 @@
 const loginForm = document.querySelector('#admin-login-form');
 const loginStatus = document.querySelector('#login-status');
 const signIn = document.querySelector('#sign-in');
+const requestedPage = new URLSearchParams(window.location.search).get('returnTo');
+const returnTo = ['index.html', 'event-info.html', 'gallery.html'].includes(requestedPage)
+  ? requestedPage : 'event-info.html';
 loginStatus.textContent = 'Enter your admin username and password.';
 loginForm.querySelectorAll('[disabled]').forEach((field) => { field.disabled = false; });
 loginForm.addEventListener('submit', async (event) => {
@@ -18,7 +21,7 @@ loginForm.addEventListener('submit', async (event) => {
     });
     const result = await response.json();
     if (response.ok) {
-      window.location.assign('/event-info.html');
+      window.location.assign(returnTo);
       return;
     }
     loginStatus.textContent = result.message;

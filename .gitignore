@@ -1,2 +1,4 @@
 .admin-account.json
 __pycache__/
+
+.gallery-trash/

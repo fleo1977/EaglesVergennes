@@ -31,3 +31,9 @@
 
 #main .gallery-collapse { display: flex; margin-left: auto; background: #e7e9ec; color: var(--ink); }
 #main .gallery-collapse:hover { background: #cdd2d8; }
+
+.gallery-tile { min-width: 0; }
+.gallery-tile .gallery-photo { display: block; width: 100%; }
+#main .gallery-remove { background: var(--red); color: white; margin-top: 10px; }
+#main .gallery-remove:hover { background: #941f28; }
+.gallery-tile .gallery-remove { min-height: 34px; padding: 6px 12px; font-size: .8rem; }
