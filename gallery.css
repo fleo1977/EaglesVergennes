@@ -32,8 +32,10 @@
 #main .gallery-collapse { display: flex; margin-left: auto; background: #e7e9ec; color: var(--ink); }
 #main .gallery-collapse:hover { background: #cdd2d8; }
 
-.gallery-tile { min-width: 0; }
+.gallery-tile { min-width: 0; position: relative; }
 .gallery-tile .gallery-photo { display: block; width: 100%; }
 #main .gallery-remove { background: var(--red); color: white; margin-top: 10px; }
 #main .gallery-remove:hover { background: #941f28; }
-.gallery-tile .gallery-remove { min-height: 34px; padding: 6px 12px; font-size: .8rem; }
+.gallery-remove-photo { position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; padding: 0; display: grid; place-items: center; border: 0; border-radius: 50%; background: rgba(0, 0, 0, .65); color: white; font-size: 25px; line-height: 1; cursor: pointer; transition: background-color 150ms; }
+.gallery-remove-photo:hover { background: var(--red); }
+.gallery-remove-photo:focus-visible { outline: 3px solid white; outline-offset: 2px; }

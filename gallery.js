@@ -46,9 +46,10 @@ function render() {
       const tile = element('div', '', 'gallery-tile');
       tile.append(button);
       if (authenticated && !showMore) {
-        const remove = element('button', 'Remove Picture', 'button gallery-remove');
+        const remove = element('button', '×', 'gallery-remove-photo');
         remove.type = 'button';
         remove.setAttribute('aria-label', `Remove picture ${index + 1} from ${event.title}`);
+        remove.title = 'Remove picture';
         remove.addEventListener('click', () => removeItem(remove, '/api/gallery/delete-photo',
           { eventId: event.id, photoId: photo.id },
           `Remove picture ${index + 1} from “${event.title}”?`, 'Picture removed.'));
