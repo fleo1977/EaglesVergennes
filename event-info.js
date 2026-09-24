@@ -35,12 +35,7 @@ form.addEventListener('submit', async (event) => {
   try {
     const file = form.elements.picture.files[0];
     if (file && file.size > 5 * 1024 * 1024) throw new Error('Choose an image smaller than 5 MB.');
-    const image = file ? await new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = () => reject(new Error('Could not read the image.'));
-      reader.readAsDataURL(file);
-    }) : null;
+    const image = file ? await window.prepareUploadImage(file) : null;
     const response = await fetch('/api/event-info', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ image, description: form.elements.description.value }),

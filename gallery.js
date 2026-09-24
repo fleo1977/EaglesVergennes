@@ -89,7 +89,7 @@ function render() {
           if (files.some(file => file.size > 5 * 1024 * 1024)) throw new Error('Each picture must be under 5 MB.');
           for (const file of files) {
             status.textContent = `Uploading ${uploaded + 1} of ${files.length}…`;
-            const image = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = () => reject(new Error('Could not read picture.')); reader.readAsDataURL(file); });
+            const image = await window.prepareUploadImage(file);
             gallery = await post('/api/gallery/photos', { eventId: event.id, image }); uploaded++;
           }
           notice.textContent = `${uploaded} picture${uploaded === 1 ? '' : 's'} added to ${event.title}.`;

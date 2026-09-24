@@ -19,14 +19,15 @@ loginForm.addEventListener('submit', async (event) => {
         password: loginForm.elements.password.value,
       }),
     });
+    if (response.status === 429) throw new Error('Too many attempts. Please wait three minutes and try again.');
     const result = await response.json();
     if (response.ok) {
       window.location.assign(returnTo);
       return;
     }
     loginStatus.textContent = result.message;
-  } catch {
-    loginStatus.textContent = 'Sign-in is unavailable. Please try again later.';
+  } catch (error) {
+    loginStatus.textContent = error.message.includes('Too many attempts') ? error.message : 'Sign-in is unavailable. Please try again later.';
   } finally {
     loginForm.elements.password.value = '';
     signIn.disabled = false;

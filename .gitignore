@@ -2,3 +2,8 @@
 __pycache__/
 
 .gallery-trash/
+node_modules/
+dist/
+.netlify/
+.env
+.env.*
