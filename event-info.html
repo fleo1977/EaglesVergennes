@@ -52,19 +52,19 @@
     </nav>
     <h1>Upcoming Event Info</h1>
     <p id="event-load-status" role="status"></p>
-    <article id="event-display" hidden>
-      <img id="event-picture" alt="Event flyer" hidden>
-      <p id="event-description"></p>
-    </article>
+    <div id="event-list"></div>
     <section id="event-editor" aria-labelledby="editor-title" hidden>
-      <h2 id="editor-title">Edit Event Info</h2>
+      <h2 id="editor-title">Add an Event</h2>
       <form id="event-form">
+        <label for="event-title">Event title</label>
+        <input id="event-title" name="title" maxlength="120" required>
         <label for="event-upload">Event picture</label>
         <input id="event-upload" name="picture" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="upload-help">
-        <small id="upload-help">JPG, PNG or WebP, up to 5 MB. Leave empty to keep the current picture.</small>
+        <small id="upload-help">JPG, PNG or WebP, up to 5 MB. One picture per event. When editing, leave empty to keep the current picture.</small>
         <label for="event-text">Description</label>
         <textarea id="event-text" name="description" rows="6" maxlength="10000" placeholder="Add the event details…"></textarea>
-        <button class="button primary" type="submit">Save Event Info</button>
+        <button class="button primary" type="submit">Add Event</button>
+        <button class="button secondary" id="cancel-edit" type="button" hidden>Cancel Editing</button>
         <p id="event-status" role="status"></p>
       </form>
     </section>

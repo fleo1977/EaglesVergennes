@@ -74,7 +74,7 @@ class Handler(SimpleHTTPRequestHandler):
             return self.send_error(403)
         if self.path in {'/api/gallery/events', '/api/gallery/photos', '/api/gallery/delete-event', '/api/gallery/delete-photo'}:
             return self.save_gallery()
-        if self.path == '/api/event-info':
+        if self.path in {'/api/event-info', '/api/event-info/delete'}:
             return self.save_event()
         if urlsplit(self.path).path == '/api/logout':
             SESSIONS.pop(self.token(), None)
@@ -121,12 +121,30 @@ class Handler(SimpleHTTPRequestHandler):
             if not 0 < length <= 7 * 1024 * 1024:
                 return self.reply(413, 'Choose an image smaller than 5 MB.')
             data = json.loads(self.rfile.read(length))
+            path = ROOT / 'data/event-info.json'
+            previous = json.loads(path.read_text()) if path.exists() else {}
+            events = previous.get('events', [])
+            if 'events' not in previous and (previous.get('image') or previous.get('description')):
+                events = [dict(previous, id='legacy', title='Upcoming Event')]
+            event_id = data.get('id')
+            current = next((e for e in events if e['id'] == event_id), None)
+            if event_id and current is None:
+                return self.reply(404, 'Event not found. Refresh the page.')
+            if self.path.endswith('/delete'):
+                if not current:
+                    return self.reply(404, 'Event not found.')
+                result = {'events': [e for e in events if e['id'] != event_id]}
+                temporary = path.with_suffix('.tmp')
+                temporary.write_text(json.dumps(result))
+                temporary.replace(path)
+                return self.reply(200, result)
+            title = data.get('title', '')
+            if not isinstance(title, str) or not title.strip() or len(title) > 120:
+                raise ValueError()
             description = data['description']
             if not isinstance(description, str) or len(description) > 10000:
                 raise ValueError()
-            path = ROOT / 'data/event-info.json'
-            previous = json.loads(path.read_text()) if path.exists() else {}
-            image_url = previous.get('image', '')
+            image_url = (current or {}).get('image', '')
             if data.get('image') is not None:
                 header, encoded = data['image'].split(',', 1)
                 if header not in {'data:image/png;base64', 'data:image/jpeg;base64', 'data:image/webp;base64'}:
@@ -145,7 +163,14 @@ class Handler(SimpleHTTPRequestHandler):
                         image.convert('RGB').save(output, format='JPEG', quality=90)
                 # Store only a decoded, re-encoded raster; discard filenames and metadata.
                 image_url = 'data:image/jpeg;base64,' + base64.b64encode(output.getvalue()).decode()
-            result = {'image': image_url, 'description': description}
+            if not image_url:
+                raise ValueError()
+            event = {'id': event_id or secrets.token_hex(16), 'title': title.strip(), 'image': image_url, 'description': description}
+            if current:
+                events[events.index(current)] = event
+            else:
+                events.append(event)
+            result = {'events': events}
             temporary = path.with_suffix('.tmp')
             temporary.write_text(json.dumps(result))
             temporary.replace(path)

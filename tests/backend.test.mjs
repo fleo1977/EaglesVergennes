@@ -18,9 +18,21 @@ test('authentication, persistent edits, image validation and deletion',async()=>
  assert.equal((await request('/api/gallery/events',{title:'bad',date:'2026-02-30'})).status,400);
  assert.equal((await request('/api/event-info',{description:'bad'},{origin:'https://evil.example'})).status,403);
  const image='data:image/png;base64,'+(await sharp({create:{width:2,height:2,channels:3,background:'red'}}).png().toBuffer()).toString('base64');
- assert.equal((await request('/api/event-info',{description:'Saved',image})).status,200);
+ assert.equal((await request('/api/event-info',{title:'First event',description:'Saved',image})).status,200);
  handler=createHandler({store,account});
- assert.equal((await (await request('/data/event-info.json')).json()).description,'Saved');
+ assert.equal((await (await request('/data/event-info.json')).json()).events[0].description,'Saved');
+ const first=(await (await request('/data/event-info.json')).json()).events[0];
+ let result=await request('/api/event-info',{title:'Second event',description:'Second',image}); assert.equal(result.status,200);
+ const second=(await result.json()).events[1];
+ result=await request('/api/event-info',{id:first.id,title:'Edited first',description:'Edited',image:null});
+ const edited=await result.json(); assert.equal(edited.events.length,2);assert.equal(edited.events[1].description,'Second');assert.equal(edited.events[0].image,first.image);
+ assert.equal((await request('/api/event-info',{title:'No picture',description:'None'})).status,400);
+ assert.equal((await request('/api/event-info/delete',{id:'missing'})).status,404);
+ result=await request('/api/event-info/delete',{id:first.id});assert.deepEqual((await result.json()).events,[second]);
+ // Previously published single-event content survives the first multi-event edit.
+ records.set('event-info',{image:first.image,description:'Legacy details'});
+ result=await request('/api/event-info',{title:'New event',description:'New details',image});
+ const migrated=await result.json();assert.equal(migrated.events[0].id,'legacy');assert.equal(migrated.events[0].description,'Legacy details');assert.equal(migrated.events.length,2);
  const created=await (await request('/api/gallery/events',{title:'Test',date:'2026-09-23'})).json(),eventId=created.events[0].id;
  assert.equal((await request('/api/gallery/photos',{eventId,image:'data:image/png;base64,aaaa'})).status,400);
  let gallery=await (await request('/api/gallery/photos',{eventId,image})).json();
