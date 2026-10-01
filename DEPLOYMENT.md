@@ -13,3 +13,5 @@ Netlify environment variables:
 The free plan uses the default environment scopes. Functions check credentials and session cookies on the server. Login attempts are rate limited. Event content, albums, photos and sessions persist in Netlify Blobs independently of deployments. Changing the account hash invalidates existing sessions.
 
 For local editing, the existing Python server uses `.admin-account.json` and local JSON files. Local data does not synchronize with Netlify Blobs. Production begins with empty Event Info and Gallery.
+
+The home page and calendar read calendar events directly from the public GitHub `master/data/events.json` feed. The scheduled GitHub Actions calendar sync must remain enabled; Netlify automatic builds remain stopped. Calendar changes appear after a successful sync and a page refresh, without a deployment.

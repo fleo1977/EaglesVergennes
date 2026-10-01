@@ -24,7 +24,8 @@ suggestionForm?.addEventListener('submit', (event) => {
   formStatus.textContent = 'Thanks. Your suggestion has been noted for the next build step.';
 });
 
-const calendarDataUrl = 'data/events.json';
+// The scheduled GitHub sync updates this feed without a Netlify deployment.
+const calendarDataUrl = 'https://raw.githubusercontent.com/fleo1977/EaglesVergennes/master/data/events.json';
 const calendarTimeZone = 'America/New_York';
 const calendarStartHour = 9;
 const calendarEndHour = 23;
