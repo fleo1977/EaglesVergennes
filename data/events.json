@@ -1,106 +1,15 @@
 {
-  "updated": "2026-10-01T13:23:13.104136+00:00",
+  "updated": "2026-11-03T15:13:43.583158+00:00",
   "events": [
     {
-      "title": "Weekly Drawing",
-      "start": "2026-09-28T23:00:00Z",
-      "end": "2026-09-28T23:00:00Z",
-      "allDay": false,
-      "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
-    },
-    {
-      "title": "Queen of Hearts Drawing",
-      "start": "2026-09-30T23:00:00Z",
-      "end": "2026-09-30T23:00:00Z",
-      "allDay": false,
-      "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
-    },
-    {
-      "title": "Eagles Fish Fry",
-      "start": "2026-10-02T21:00:00Z",
-      "end": "2026-10-02T23:00:00Z",
-      "allDay": false,
-      "description": "(Bill Munson added)"
-    },
-    {
-      "title": "Weekly Drawing",
-      "start": "2026-10-05T23:00:00Z",
-      "end": "2026-10-05T23:00:00Z",
-      "allDay": false,
-      "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
-    },
-    {
-      "title": "Queen of Hearts Drawing",
-      "start": "2026-10-07T23:00:00Z",
-      "end": "2026-10-07T23:00:00Z",
-      "allDay": false,
-      "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
-    },
-    {
-      "title": "Groovy 60\u2019s Night",
-      "start": "2026-10-11T20:00:00Z",
-      "end": "2026-10-11T22:00:00Z",
-      "allDay": false,
-      "description": "(Bill Munson added)"
-    },
-    {
-      "title": "Weekly Drawing",
-      "start": "2026-10-12T23:00:00Z",
-      "end": "2026-10-12T23:00:00Z",
-      "allDay": false,
-      "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
-    },
-    {
-      "title": "Aerie Meeting",
-      "start": "2026-10-13T23:00:00Z",
-      "end": "2026-10-14T00:00:00Z",
-      "allDay": false,
-      "description": "(Bill Munson added)"
-    },
-    {
-      "title": "Aux Meeting",
-      "start": "2026-10-13T23:00:00Z",
-      "end": "2026-10-14T00:00:00Z",
-      "allDay": false,
-      "description": "(Bill Munson added)"
-    },
-    {
-      "title": "Queen of Hearts Drawing",
-      "start": "2026-10-14T23:00:00Z",
-      "end": "2026-10-14T23:00:00Z",
-      "allDay": false,
-      "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
-    },
-    {
-      "title": "Weekly Drawing",
-      "start": "2026-10-19T23:00:00Z",
-      "end": "2026-10-19T23:00:00Z",
-      "allDay": false,
-      "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
-    },
-    {
-      "title": "Queen of Hearts Drawing",
-      "start": "2026-10-21T23:00:00Z",
-      "end": "2026-10-21T23:00:00Z",
-      "allDay": false,
-      "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
-    },
-    {
-      "title": "Weekly Drawing",
-      "start": "2026-10-26T23:00:00Z",
-      "end": "2026-10-26T23:00:00Z",
-      "allDay": false,
-      "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
-    },
-    {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2026-10-27T23:00:00Z",
       "end": "2026-10-28T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2026-10-27T23:00:00Z",
       "end": "2026-10-28T00:00:00Z",
       "allDay": false,
@@ -112,6 +21,13 @@
       "end": "2026-10-28T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2026-10-29T22:00:00Z",
+      "end": "2026-10-30T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Halloween Party",
@@ -135,6 +51,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2026-11-05T23:00:00Z",
+      "end": "2026-11-06T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Eagles Fish Fry",
       "start": "2026-11-06T22:00:00Z",
       "end": "2026-11-07T00:00:00Z",
@@ -156,14 +79,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2026-11-11T00:00:00Z",
       "end": "2026-11-11T01:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2026-11-11T00:00:00Z",
       "end": "2026-11-11T01:00:00Z",
       "allDay": false,
@@ -175,6 +98,13 @@
       "end": "2026-11-12T00:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2026-11-12T23:00:00Z",
+      "end": "2026-11-13T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Super Bingo",
@@ -198,6 +128,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2026-11-19T23:00:00Z",
+      "end": "2026-11-20T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2026-11-24T00:00:00Z",
       "end": "2026-11-24T00:00:00Z",
@@ -205,14 +142,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2026-11-25T00:00:00Z",
       "end": "2026-11-25T01:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2026-11-25T00:00:00Z",
       "end": "2026-11-25T01:00:00Z",
       "allDay": false,
@@ -233,6 +170,13 @@
       "description": "(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2026-11-26T23:00:00Z",
+      "end": "2026-11-27T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2026-12-01T00:00:00Z",
       "end": "2026-12-01T00:00:00Z",
@@ -245,6 +189,13 @@
       "end": "2026-12-03T00:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2026-12-03T23:00:00Z",
+      "end": "2026-12-04T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Eagles Fish Fry",
@@ -261,14 +212,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2026-12-09T00:00:00Z",
       "end": "2026-12-09T01:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2026-12-09T00:00:00Z",
       "end": "2026-12-09T01:00:00Z",
       "allDay": false,
@@ -280,6 +231,20 @@
       "end": "2026-12-10T00:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2026-12-10T23:00:00Z",
+      "end": "2026-12-11T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
+      "title": "Ugly Sweater Party",
+      "start": "2026-12-12T23:00:00Z",
+      "end": "2026-12-13T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -296,6 +261,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2026-12-17T23:00:00Z",
+      "end": "2026-12-18T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2026-12-22T00:00:00Z",
       "end": "2026-12-22T00:00:00Z",
@@ -303,14 +275,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2026-12-23T00:00:00Z",
       "end": "2026-12-23T01:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2026-12-23T00:00:00Z",
       "end": "2026-12-23T01:00:00Z",
       "allDay": false,
@@ -322,6 +294,13 @@
       "end": "2026-12-24T00:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2026-12-24T23:00:00Z",
+      "end": "2026-12-25T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -336,6 +315,13 @@
       "end": "2026-12-31T00:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2026-12-31T23:00:00Z",
+      "end": "2027-01-01T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Eagles Fish Fry",
@@ -359,6 +345,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-01-07T23:00:00Z",
+      "end": "2027-01-08T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-01-12T00:00:00Z",
       "end": "2027-01-12T00:00:00Z",
@@ -366,14 +359,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2027-01-13T00:00:00Z",
       "end": "2027-01-13T01:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2027-01-13T00:00:00Z",
       "end": "2027-01-13T01:00:00Z",
       "allDay": false,
@@ -385,6 +378,13 @@
       "end": "2027-01-14T00:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-01-14T23:00:00Z",
+      "end": "2027-01-15T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -401,6 +401,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-01-21T23:00:00Z",
+      "end": "2027-01-22T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-01-26T00:00:00Z",
       "end": "2027-01-26T00:00:00Z",
@@ -408,14 +415,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2027-01-27T00:00:00Z",
       "end": "2027-01-27T01:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2027-01-27T00:00:00Z",
       "end": "2027-01-27T01:00:00Z",
       "allDay": false,
@@ -427,6 +434,13 @@
       "end": "2027-01-28T00:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-01-28T23:00:00Z",
+      "end": "2027-01-29T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -443,6 +457,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-02-04T23:00:00Z",
+      "end": "2027-02-05T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Eagles Fish Fry",
       "start": "2027-02-05T22:00:00Z",
       "end": "2027-02-06T00:00:00Z",
@@ -457,14 +478,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2027-02-10T00:00:00Z",
       "end": "2027-02-10T01:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2027-02-10T00:00:00Z",
       "end": "2027-02-10T01:00:00Z",
       "allDay": false,
@@ -476,6 +497,13 @@
       "end": "2027-02-11T00:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-02-11T23:00:00Z",
+      "end": "2027-02-12T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -492,6 +520,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-02-18T23:00:00Z",
+      "end": "2027-02-19T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-02-23T00:00:00Z",
       "end": "2027-02-23T00:00:00Z",
@@ -499,14 +534,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2027-02-24T00:00:00Z",
       "end": "2027-02-24T01:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2027-02-24T00:00:00Z",
       "end": "2027-02-24T01:00:00Z",
       "allDay": false,
@@ -518,6 +553,13 @@
       "end": "2027-02-25T00:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-02-25T23:00:00Z",
+      "end": "2027-02-26T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -534,6 +576,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-03-04T23:00:00Z",
+      "end": "2027-03-05T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Eagles Fish Fry",
       "start": "2027-03-05T22:00:00Z",
       "end": "2027-03-06T00:00:00Z",
@@ -548,14 +597,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2027-03-10T00:00:00Z",
       "end": "2027-03-10T01:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2027-03-10T00:00:00Z",
       "end": "2027-03-10T01:00:00Z",
       "allDay": false,
@@ -567,6 +616,13 @@
       "end": "2027-03-11T00:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-03-11T23:00:00Z",
+      "end": "2027-03-12T01:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -583,6 +639,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-03-18T22:00:00Z",
+      "end": "2027-03-19T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-03-22T23:00:00Z",
       "end": "2027-03-22T23:00:00Z",
@@ -590,14 +653,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2027-03-23T23:00:00Z",
       "end": "2027-03-24T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2027-03-23T23:00:00Z",
       "end": "2027-03-24T00:00:00Z",
       "allDay": false,
@@ -609,6 +672,13 @@
       "end": "2027-03-24T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-03-25T22:00:00Z",
+      "end": "2027-03-26T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -623,6 +693,13 @@
       "end": "2027-03-31T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-04-01T22:00:00Z",
+      "end": "2027-04-02T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Eagles Fish Fry",
@@ -646,6 +723,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-04-08T22:00:00Z",
+      "end": "2027-04-09T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-04-12T23:00:00Z",
       "end": "2027-04-12T23:00:00Z",
@@ -653,14 +737,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2027-04-13T23:00:00Z",
       "end": "2027-04-14T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2027-04-13T23:00:00Z",
       "end": "2027-04-14T00:00:00Z",
       "allDay": false,
@@ -672,6 +756,13 @@
       "end": "2027-04-14T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-04-15T22:00:00Z",
+      "end": "2027-04-16T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -688,6 +779,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-04-22T22:00:00Z",
+      "end": "2027-04-23T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-04-26T23:00:00Z",
       "end": "2027-04-26T23:00:00Z",
@@ -695,14 +793,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2027-04-27T23:00:00Z",
       "end": "2027-04-28T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2027-04-27T23:00:00Z",
       "end": "2027-04-28T00:00:00Z",
       "allDay": false,
@@ -714,6 +812,13 @@
       "end": "2027-04-28T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-04-29T22:00:00Z",
+      "end": "2027-04-30T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -730,6 +835,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-05-06T22:00:00Z",
+      "end": "2027-05-07T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Eagles Fish Fry",
       "start": "2027-05-07T21:00:00Z",
       "end": "2027-05-07T23:00:00Z",
@@ -744,14 +856,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2027-05-11T23:00:00Z",
       "end": "2027-05-12T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2027-05-11T23:00:00Z",
       "end": "2027-05-12T00:00:00Z",
       "allDay": false,
@@ -763,6 +875,13 @@
       "end": "2027-05-12T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-05-13T22:00:00Z",
+      "end": "2027-05-14T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -779,6 +898,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-05-20T22:00:00Z",
+      "end": "2027-05-21T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-05-24T23:00:00Z",
       "end": "2027-05-24T23:00:00Z",
@@ -786,14 +912,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2027-05-25T23:00:00Z",
       "end": "2027-05-26T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2027-05-25T23:00:00Z",
       "end": "2027-05-26T00:00:00Z",
       "allDay": false,
@@ -805,6 +931,13 @@
       "end": "2027-05-26T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-05-27T22:00:00Z",
+      "end": "2027-05-28T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -821,6 +954,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-06-03T22:00:00Z",
+      "end": "2027-06-04T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Eagles Fish Fry",
       "start": "2027-06-04T21:00:00Z",
       "end": "2027-06-04T23:00:00Z",
@@ -835,14 +975,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2027-06-08T23:00:00Z",
       "end": "2027-06-09T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2027-06-08T23:00:00Z",
       "end": "2027-06-09T00:00:00Z",
       "allDay": false,
@@ -854,6 +994,13 @@
       "end": "2027-06-09T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-06-10T22:00:00Z",
+      "end": "2027-06-11T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -877,6 +1024,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-06-17T22:00:00Z",
+      "end": "2027-06-18T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-06-21T23:00:00Z",
       "end": "2027-06-21T23:00:00Z",
@@ -884,14 +1038,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2027-06-22T23:00:00Z",
       "end": "2027-06-23T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2027-06-22T23:00:00Z",
       "end": "2027-06-23T00:00:00Z",
       "allDay": false,
@@ -903,6 +1057,13 @@
       "end": "2027-06-23T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-06-24T22:00:00Z",
+      "end": "2027-06-25T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -919,6 +1080,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-07-01T22:00:00Z",
+      "end": "2027-07-02T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-07-05T23:00:00Z",
       "end": "2027-07-05T23:00:00Z",
@@ -933,6 +1101,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-07-08T22:00:00Z",
+      "end": "2027-07-09T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-07-12T23:00:00Z",
       "end": "2027-07-12T23:00:00Z",
@@ -940,14 +1115,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2027-07-13T23:00:00Z",
       "end": "2027-07-14T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2027-07-13T23:00:00Z",
       "end": "2027-07-14T00:00:00Z",
       "allDay": false,
@@ -959,6 +1134,13 @@
       "end": "2027-07-14T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-07-15T22:00:00Z",
+      "end": "2027-07-16T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -975,6 +1157,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-07-22T22:00:00Z",
+      "end": "2027-07-23T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-07-26T23:00:00Z",
       "end": "2027-07-26T23:00:00Z",
@@ -982,14 +1171,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2027-07-27T23:00:00Z",
       "end": "2027-07-28T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2027-07-27T23:00:00Z",
       "end": "2027-07-28T00:00:00Z",
       "allDay": false,
@@ -1001,6 +1190,13 @@
       "end": "2027-07-28T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-07-29T22:00:00Z",
+      "end": "2027-07-30T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -1017,6 +1213,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-08-05T22:00:00Z",
+      "end": "2027-08-06T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-08-09T23:00:00Z",
       "end": "2027-08-09T23:00:00Z",
@@ -1024,14 +1227,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2027-08-10T23:00:00Z",
       "end": "2027-08-11T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2027-08-10T23:00:00Z",
       "end": "2027-08-11T00:00:00Z",
       "allDay": false,
@@ -1043,6 +1246,13 @@
       "end": "2027-08-11T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-08-12T22:00:00Z",
+      "end": "2027-08-13T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -1059,6 +1269,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-08-19T22:00:00Z",
+      "end": "2027-08-20T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-08-23T23:00:00Z",
       "end": "2027-08-23T23:00:00Z",
@@ -1066,14 +1283,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2027-08-24T23:00:00Z",
       "end": "2027-08-25T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2027-08-24T23:00:00Z",
       "end": "2027-08-25T00:00:00Z",
       "allDay": false,
@@ -1085,6 +1302,13 @@
       "end": "2027-08-25T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-08-26T22:00:00Z",
+      "end": "2027-08-27T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -1101,6 +1325,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-09-02T22:00:00Z",
+      "end": "2027-09-03T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-09-06T23:00:00Z",
       "end": "2027-09-06T23:00:00Z",
@@ -1115,6 +1346,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-09-09T22:00:00Z",
+      "end": "2027-09-10T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-09-13T23:00:00Z",
       "end": "2027-09-13T23:00:00Z",
@@ -1122,14 +1360,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting",
+      "title": "Aux Meeting",
       "start": "2027-09-14T23:00:00Z",
       "end": "2027-09-15T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting",
       "start": "2027-09-14T23:00:00Z",
       "end": "2027-09-15T00:00:00Z",
       "allDay": false,
@@ -1141,6 +1379,13 @@
       "end": "2027-09-15T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-09-16T22:00:00Z",
+      "end": "2027-09-17T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
     },
     {
       "title": "Weekly Drawing",
@@ -1157,6 +1402,13 @@
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
     },
     {
+      "title": "Members Bar Bingo",
+      "start": "2027-09-23T22:00:00Z",
+      "end": "2027-09-24T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
       "title": "Weekly Drawing",
       "start": "2027-09-27T23:00:00Z",
       "end": "2027-09-27T23:00:00Z",
@@ -1164,14 +1416,14 @@
       "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     },
     {
-      "title": "Aux Meeting",
+      "title": "Aerie Meeting ",
       "start": "2027-09-28T23:00:00Z",
       "end": "2027-09-29T00:00:00Z",
       "allDay": false,
       "description": "(Bill Munson added)"
     },
     {
-      "title": "Aerie Meeting ",
+      "title": "Aux Meeting",
       "start": "2027-09-28T23:00:00Z",
       "end": "2027-09-29T00:00:00Z",
       "allDay": false,
@@ -1183,6 +1435,132 @@
       "end": "2027-09-29T23:00:00Z",
       "allDay": false,
       "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-09-30T22:00:00Z",
+      "end": "2027-10-01T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
+      "title": "Weekly Drawing",
+      "start": "2027-10-04T23:00:00Z",
+      "end": "2027-10-04T23:00:00Z",
+      "allDay": false,
+      "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Queen of Hearts Drawing",
+      "start": "2027-10-06T23:00:00Z",
+      "end": "2027-10-06T23:00:00Z",
+      "allDay": false,
+      "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-10-07T22:00:00Z",
+      "end": "2027-10-08T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
+      "title": "Weekly Drawing",
+      "start": "2027-10-11T23:00:00Z",
+      "end": "2027-10-11T23:00:00Z",
+      "allDay": false,
+      "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Aux Meeting",
+      "start": "2027-10-12T23:00:00Z",
+      "end": "2027-10-13T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
+      "title": "Aerie Meeting",
+      "start": "2027-10-12T23:00:00Z",
+      "end": "2027-10-13T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
+      "title": "Queen of Hearts Drawing",
+      "start": "2027-10-13T23:00:00Z",
+      "end": "2027-10-13T23:00:00Z",
+      "allDay": false,
+      "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-10-14T22:00:00Z",
+      "end": "2027-10-15T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
+      "title": "Weekly Drawing",
+      "start": "2027-10-18T23:00:00Z",
+      "end": "2027-10-18T23:00:00Z",
+      "allDay": false,
+      "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Queen of Hearts Drawing",
+      "start": "2027-10-20T23:00:00Z",
+      "end": "2027-10-20T23:00:00Z",
+      "allDay": false,
+      "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-10-21T22:00:00Z",
+      "end": "2027-10-22T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
+      "title": "Weekly Drawing",
+      "start": "2027-10-25T23:00:00Z",
+      "end": "2027-10-25T23:00:00Z",
+      "allDay": false,
+      "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Aerie Meeting ",
+      "start": "2027-10-26T23:00:00Z",
+      "end": "2027-10-27T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
+      "title": "Aux Meeting",
+      "start": "2027-10-26T23:00:00Z",
+      "end": "2027-10-27T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
+      "title": "Queen of Hearts Drawing",
+      "start": "2027-10-27T23:00:00Z",
+      "end": "2027-10-27T23:00:00Z",
+      "allDay": false,
+      "description": "If you played and are present during the drawing, you will recieve 60% of proceeds. If you played and are not present, you will recieve 40% of proceeds.\n\n(Bill Munson added)"
+    },
+    {
+      "title": "Members Bar Bingo",
+      "start": "2027-10-28T22:00:00Z",
+      "end": "2027-10-29T00:00:00Z",
+      "allDay": false,
+      "description": "(Bill Munson added)"
+    },
+    {
+      "title": "Weekly Drawing",
+      "start": "2027-11-01T23:00:00Z",
+      "end": "2027-11-01T23:00:00Z",
+      "allDay": false,
+      "description": "If you signed the books during the week and are present during drawing, you will get 100% of proceeds, if you signed the weekly and are not present during drawing, you will get 50% of proceeds.\n\n(Bill Munson added)"
     }
   ]
 }
