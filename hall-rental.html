@@ -7,6 +7,8 @@
   <title>Hall Rental | Addison County Eagles</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hall-rental.css">
+  <script src="hall-rental.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -49,7 +51,45 @@
     </nav>
     <p class="eyebrow">Celebrate With Us</p>
     <h1>Hall Rental</h1>
-    <p>More to come.</p>
+    <p class="rental-intro">Plan your next celebration at Addison County Eagles. Explore our hall options, then send us your preferred date and event details.</p>
+    <section class="rental-options" aria-labelledby="rental-options-title">
+      <h2 id="rental-options-title">Choose your space</h2>
+      <div class="rental-cards">
+        <article class="rental-card"><div class="rental-card-heading"><p class="eyebrow">Up to 125 people</p><p class="rental-member-note"><strong>Eagles members: 50% off hall rental</strong></p></div><h3>Half Hall</h3>
+          <dl><div><dt>Hall rental with Eagles catering</dt><dd>$250</dd></div><div><dt>Hall rental with outside food</dt><dd>$300</dd></div></dl>
+        </article>
+        <article class="rental-card"><div class="rental-card-heading"><p class="eyebrow">Up to 360 people</p><p class="rental-member-note"><strong>Eagles members: 50% off hall rental</strong></p></div><h3>Full Hall</h3>
+          <dl><div><dt>Hall rental with Eagles catering</dt><dd>$500</dd></div><div><dt>Hall rental with outside food</dt><dd>$600</dd></div></dl>
+        </article>
+      </div>
+      <p class="rental-note">Catering is quoted separately. Request a quote below for your event.</p>
+    </section>
+    <section class="rental-request" aria-labelledby="request-title">
+      <h2 id="request-title">Request a date &amp; quote</h2>
+      <p>This is an inquiry, not a confirmed reservation. Our team will contact you to confirm availability, options, and pricing.</p>
+      <form id="rental-form" action="https://formsubmit.co/addisoncountyeagles@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Hall Rental Inquiry — Addison County Eagles">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="rental-honeypot">
+        <p class="rental-required-help"><span class="rental-required" aria-hidden="true">*</span> Required fields</p>
+        <div class="rental-fields">
+          <label><span>Your name <span class="rental-required" aria-hidden="true">*</span></span> <input name="name" pattern=".*\S.*" autocomplete="name" maxlength="120" required></label>
+          <label><span>Email address <span class="rental-required" aria-hidden="true">*</span></span> <input type="email" name="email" autocomplete="email" maxlength="254" required></label>
+          <label><span>Phone number <span class="rental-required" aria-hidden="true">*</span></span> <input type="tel" name="Phone" pattern=".*\S.*" autocomplete="tel" maxlength="40" required></label>
+          <label><span>Preferred event date <span class="rental-required" aria-hidden="true">*</span></span> <input type="date" name="Preferred date" id="rental-date" required></label>
+          <label><span>Preferred start time <span class="rental-optional">(optional)</span></span> <input type="time" name="Preferred start time"></label>
+          <label><span>Expected guests <span class="rental-required" aria-hidden="true">*</span></span> <input type="number" name="Guests" id="rental-guests" min="1" max="360" step="1" required></label>
+          <label><span>Hall option <span class="rental-required" aria-hidden="true">*</span></span> <select name="Hall option" id="rental-hall" required><option value="">Choose an option</option><option value="Half Hall">Half Hall — up to 125 guests</option><option value="Full Hall">Full Hall — up to 360 guests</option><option value="Help me choose">Help me choose</option></select></label>
+          <label><span>Food &amp; catering <span class="rental-required" aria-hidden="true">*</span></span> <select name="Catering preference" required><option value="">Choose an option</option><option value="Eagles catering — request a quote">Eagles catering — request a quote</option><option value="Outside food">We will bring outside food</option><option value="No food planned">No food planned</option><option value="Not sure — discuss options">Not sure — discuss options</option></select></label>
+          <label><span>Eagles member? <span class="rental-required" aria-hidden="true">*</span></span> <select name="Eagles member" required><option value="">Choose an option</option><option>Yes</option><option>No</option></select></label>
+          <label><span>Type of event <span class="rental-required" aria-hidden="true">*</span></span> <input name="Event type" pattern=".*\S.*" placeholder="Wedding, birthday, meeting…" maxlength="150" required></label>
+          <label class="rental-wide"><span>Additional details <span class="rental-optional">(optional)</span></span> <textarea name="Details" rows="5" maxlength="5000" placeholder="Tell us about timing, catering needs, dietary requirements, or any questions."></textarea></label>
+        </div>
+        <p class="rental-note">Your contact details and event request will be sent to our team so we can respond to your inquiry.</p>
+        <button class="button primary" type="submit">Send Rental Inquiry</button>
+        <p class="rental-phone">Prefer to call? <a href="tel:8028772055">802.877.2055</a></p>
+      </form>
+    </section>
   </main>
 
   <footer class="footer">

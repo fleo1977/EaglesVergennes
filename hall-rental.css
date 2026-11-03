@@ -1,0 +1,39 @@
+#main.placeholder-page { width: min(1120px, calc(100% - 32px)); }
+.rental-intro { max-width: none; }
+.rental-options { margin: 36px 0 48px; }
+.rental-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.rental-card, .rental-request { padding: clamp(20px, 4vw, 32px); border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.rental-card h3 { margin: 8px 0 24px; font-size: 1.8rem; }
+.rental-card dl { margin: 0; }
+.rental-card dl div { display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-top: 1px solid var(--line); }
+.rental-card dd { margin: 0; font-weight: 800; color: var(--blue-dark); }
+.rental-note { font-size: .95rem; line-height: 1.65; }
+.rental-request { margin-bottom: 40px; }
+.rental-request h2 { margin-top: 0; }
+.rental-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 28px 0; }
+.rental-fields label { display: grid; align-content: start; gap: 8px; font-weight: 700; color: var(--blue-dark); }
+.rental-fields input, .rental-fields select, .rental-fields textarea { width: 100%; min-width: 0; box-sizing: border-box; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: white; color: var(--ink); font: inherit; font-weight: 400; }
+.rental-fields textarea { resize: vertical; }
+.rental-fields :is(input, select, textarea):focus { outline: 3px solid rgba(14,91,145,.18); border-color: var(--blue); }
+.rental-wide { grid-column: 1 / -1; }
+.rental-honeypot { display: none; }
+#rental-form .button { background: var(--blue); color: white; border: 0; cursor: pointer; }
+#rental-form .button:hover, #rental-form .button:focus-visible { background: var(--blue-dark); }
+.rental-phone { margin-bottom: 0; }
+@media (max-width: 650px) { .rental-cards, .rental-fields { grid-template-columns: minmax(0, 1fr); } }
+
+#rental-options-title { margin-bottom: 20px; }
+
+.placeholder-page .rental-card .rental-member-note { margin: 0; color: var(--red); font-size: .9rem; text-align: right; }
+
+.rental-card-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.rental-card-heading .eyebrow { margin: 0; flex-shrink: 0; }
+
+#rental-form .rental-required { color: var(--red); font-weight: 800; }
+.rental-required-help { font-size: .9rem; margin-bottom: 0; }
+
+#rental-form .rental-optional { color: #8a8a8a; font-size: .8em; font-weight: 400; }
+.rental-request > p { margin-bottom: 4px; }
+#rental-form .rental-required-help { margin-top: 0; }
+
+#rental-form .rental-fields { margin-top: 54px; }
