@@ -1,13 +1,6 @@
 {
-  "updated": "2026-11-22T15:23:07.581299+00:00",
+  "updated": "2026-11-22T21:49:51.144924+00:00",
   "events": [
-    {
-      "title": "Super Bingo",
-      "start": "2026-11-15T16:00:00Z",
-      "end": "2026-11-15T20:00:00Z",
-      "allDay": false,
-      "description": "(Bill Munson added)"
-    },
     {
       "title": "Weekly Drawing",
       "start": "2026-11-17T00:00:00Z",
